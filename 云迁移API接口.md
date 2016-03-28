@@ -35,7 +35,7 @@
 *URL*
 
 ```
-POST /v2/corp/move
+POST /v2/corp/migration
 ```
 
 *Header*
@@ -86,7 +86,7 @@ HTTP/1.1 200 OK
 *URL*
 
 ```
-DELETE /v2/corp/move
+DELETE /v2/corp/migration
 ```
 
 *Header*
@@ -127,7 +127,7 @@ HTTP/1.1 200 OK
 *URL*
 
 ```
-PUT /v2/corp/move/confirm
+PUT /v2/corp/migration/confirm
 ```
 
 *Header*
@@ -165,7 +165,7 @@ HTTP/1.1 200 OK
 *URL*
 
 ```
-GET /v2/corp/move
+GET /v2/corp/migration
 ```
 
 *Header*
@@ -202,11 +202,12 @@ HTTP/1.1 200 OK
 ```
 
 | 字段 | 类型 | 是否必须 | 说明 | 默认值 |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | state | int | 是 | 云迁移状态，见附录 | 0 |
 | cm | string | 否 | 迁移后的平台CM服务器的连接地址,域名或IP加上端口 | -- |
 | console | string | 否 | 迁移后的企业管理台登录页面地址,http\https, 域名或IP加上端口 | -- |
 | api | string | 否 | 迁移后的私有云API地址,http\https, 域名或IP加上端口 | -- |
+
 
 ### 5. 修改云迁移配置
 
@@ -215,7 +216,7 @@ HTTP/1.1 200 OK
 *URL*
 
 ```
-PUT /v2/corp/move
+PUT /v2/corp/migration
 ```
 
 *Header*
